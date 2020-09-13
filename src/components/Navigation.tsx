@@ -17,6 +17,11 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
+            <Link href="/download">
+              <a className={router.pathname === "/download" ? "active" : null}>Download</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/posts">
               <a
                 className={

@@ -13,7 +13,7 @@ export default function Download() {
       <div className="container">
         <div>
           <h1>
-            Hi, We're Next.js wef wef & Netlify<span className="fancy">.</span>
+            DOWNLOAD<span className="fancy">.</span>
           </h1>
           <span className="handle">@nextjs-netlify-blog</span>
           <h2>A blog template with Next.js and Netlify.</h2>
