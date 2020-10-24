@@ -4,7 +4,7 @@ import { Player, BigPlayButton } from "video-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function Index() {
-  const [playerState, setPLayerState] = useState({});
+  const [playerState, setPLayerState] = useState(() => Player);
   const [vplayerState, setVPLayerState] = useState(false);
 
   const play = () => {
