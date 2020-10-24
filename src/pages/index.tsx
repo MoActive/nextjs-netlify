@@ -1,14 +1,16 @@
 import ReactPlayer from "react-player/lazy";
 
-import { Player, BigPlayButton } from "video-react";
+import { Player, BigPlayButton, ControlBar } from "video-react";
 import { useEffect, useRef, useState } from "react";
 
 export default function Index() {
   const [playerState, setPLayerState] = useState(() => Player);
   const [vplayerState, setVPLayerState] = useState(false);
+  const [controlBar, setcontrolBar] = useState(true);
 
   const play = () => {
     setVPLayerState(true);
+    setcontrolBar(false)
     playerState.actions.mute(false);
     playerState.actions.seek(0);
     playerState.actions.play();
@@ -16,6 +18,7 @@ export default function Index() {
 
   const stop = () => {
     setVPLayerState(false);
+    setcontrolBar(true)
     playerState.actions.mute(true);
   };
 
@@ -29,10 +32,11 @@ export default function Index() {
           fluid
           muted={true}
           playsInline={true}
-          autoPlay={true}
+          autoPlay
           width={10}
         >
           <BigPlayButton position="center" />
+          <ControlBar disableDefaultControls={controlBar} className="my-class" />
           <source src={"/assets/videos/Capture One.mp4"} />
         </Player>
 
