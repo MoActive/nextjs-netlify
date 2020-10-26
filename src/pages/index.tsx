@@ -1,7 +1,5 @@
-import ReactPlayer from "react-player/lazy";
-
 import { Player, BigPlayButton, ControlBar } from "video-react";
-import { useEffect, useRef, useState } from "react";
+import {  useState } from "react";
 
 export default function Index() {
   const [playerState, setPLayerState] = useState(() => Player);
